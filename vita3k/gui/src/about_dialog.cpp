@@ -131,7 +131,7 @@ void draw_about_dialog(GuiState &gui, EmuEnvState &emuenv) {
     const float STAFF_COLUMN_POS(HALF_WINDOW_WIDTH - (STAFF_LIST_SIZE.x / 2.f));
 
     ImGui::SetCursorPosX(STAFF_COLUMN_POS);
-    if (ImGui::BeginTable("##vita3k_staff_table", STAFF_COLUMN_COUNT, ImGuiTableFlags_ScrollY | ImGuiTableFlags_BordersV | ImGuiTableFlags_NoSavedSettings, STAFF_LIST_SIZE)) {
+    if (ImGui::BeginTable("##vita3k_staff_table", STAFF_COLUMN_COUNT, ImGuiTableFlags_ScrollY | ImGuiTableFlags_BordersV | ImGuiTableFlags_NoSavedSettings | ImGuiTableFlags_SizingFixedFit, STAFF_LIST_SIZE)) {
         ImGui::TableSetupScrollFreeze(1, 1);
         ImGui::PushStyleColor(ImGuiCol_Text, GUI_COLOR_TEXT_TITLE);
         ImGui::TableSetupColumn(lang["developers"].c_str(), ImGuiTableColumnFlags_NoHide | ImGuiTableColumnFlags_WidthFixed, STAFF_COLUMN_SIZE);
