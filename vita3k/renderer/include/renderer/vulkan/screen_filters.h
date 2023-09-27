@@ -41,6 +41,7 @@ public:
     virtual bool need_post_processing_render_pass() {
         return false;
     }
+    virtual ~ScreenFilter() = default;
 };
 
 class SinglePassScreenFilter : public ScreenFilter {

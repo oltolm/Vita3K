@@ -19,7 +19,9 @@
 
 #include <net/types.h>
 
-#ifdef WIN32
+#include <map>
+
+#ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include <Ws2tcpip.h>
