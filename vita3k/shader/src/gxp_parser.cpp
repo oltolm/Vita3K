@@ -472,6 +472,10 @@ DataType get_texture_component_type(SceGxmTextureFormat format) {
     case SCE_GXM_TEXTURE_BASE_FORMAT_YUV420P3:
     case SCE_GXM_TEXTURE_BASE_FORMAT_YUV422:
         return DataType::UINT8;
+    case SCE_GXM_TEXTURE_BASE_FORMAT_UBC6H:
+    case SCE_GXM_TEXTURE_BASE_FORMAT_SBC6H:
+    case SCE_GXM_TEXTURE_BASE_FORMAT_UBC7:
+    case SCE_GXM_TEXTURE_BASE_FORMAT_INVALID: break;
     }
     return DataType::UNK;
 }

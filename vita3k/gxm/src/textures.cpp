@@ -210,6 +210,7 @@ uint32_t bits_per_pixel(SceGxmTextureBaseFormat base_format) {
     case SCE_GXM_TEXTURE_BASE_FORMAT_U8U8U8:
     case SCE_GXM_TEXTURE_BASE_FORMAT_S8S8S8:
         return 24;
+    case SCE_GXM_TEXTURE_BASE_FORMAT_INVALID: break;
     }
 
     return 0;
