@@ -575,6 +575,7 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                     ImGui::TextWrapped("%s", selected.c_str());
                     break;
                 }
+                case Popup::SELECT_SYS_LANG: break;
                 }
             }
             break;
@@ -736,6 +737,9 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
             ImGui::Columns(1);
             break;
         }
+        case Menu::DATE_FORMAT:
+        case Menu::TIME_FORMAT:
+        case Menu::SELECT_INPUT_LANG: break;
         }
         break;
     }
