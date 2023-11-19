@@ -586,7 +586,7 @@ static LONG WINAPI exception_handler(PEXCEPTION_POINTERS pExp) noexcept {
 
 static void register_access_violation_handler(const AccessViolationHandler &handler) {
     access_violation_handler = handler;
-    if (!AddVectoredExceptionHandler(1, exception_handler)) {
+    if (!AddVectoredExceptionHandler(FALSE, exception_handler)) {
         LOG_CRITICAL("Failed to register an exception handler");
     }
 }
