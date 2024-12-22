@@ -134,7 +134,7 @@ macro(get_boost)
 
 		# First, try to find Boost without any hints (system Boost)
 		if(NOT VITA3K_FORCE_CUSTOM_BOOST)
-			find_package(Boost 1.81 COMPONENTS ${BOOST_MODULES_TO_FIND} QUIET)
+			find_package(Boost 1.81 COMPONENTS ${BOOST_MODULES_TO_FIND} CONFIG QUIET)
 		endif()
 
 		# If system Boost hasn't been found, then enable hints to find custom Boost
